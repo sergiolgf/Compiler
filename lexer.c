@@ -103,21 +103,22 @@ int main(int argc, char** argv){
 	char charAtual=prox_char(buffer,in);
 	
 	while(charAtual!=EOF){
-		if(!check_letra(charAtual)){
-		
+		switch(check_letra(charAtual)){
+			case 1:
+				break;
+			case 0:
+				switch(check_digito(charAtual)){
+					case 1:
+						break;
+					case 0:
+					
+				}
 		}
-	}
-	/*
-	for(char charAtual=prox_char(buffer,in);charAtual!=EOF;charAtual=prox_char(buffer,in))
 		printf("%c",charAtual);
-	*/
+		charAtual=prox_char(buffer,in);
+	}
 	
-	
-	
-
-
-	
-	printf("\n%d linhas\n",buffer->n_linhas);
+	printf("\n\n%d linhas\n",buffer->n_linhas);
 	
 	fclose(in);
 	//fclose(out);
