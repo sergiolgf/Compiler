@@ -1,3 +1,5 @@
+*.Executables
+
 # Prerequisites
 *.d
 
